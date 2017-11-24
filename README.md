@@ -14,7 +14,7 @@ When the reader has completed this journey, they will understand how to:
 - Query the graph database for insights
 - Submit the request and visualize the results on a Web UI
 
-The intended audience for this journey is developers who want to learn a method for building a solution with queryable insights on text content across documents. The distinguishing factor of this journey is that it allows a configurable mechanism to achieve the insights. 
+The intended audience for this journey are developers who want to learn a method for building a solution with queryable insights on unstructured text content across documents. The distinguishing factor of this journey is that it allows a configurable mechanism to achieve the insights. 
 
 ![](doc/source/images/architecture.png)
 
@@ -26,13 +26,20 @@ The intended audience for this journey is developers who want to learn a method 
 
 * [Watson Natural Language Understanding](https://console.bluemix.net/catalog/services/natural-language-understanding/?cm_sp=dw-bluemix-_-code-_-devcenter): A Bluemix service that can analyze text to extract meta-data from content such as concepts, entities, keywords, categories, sentiment, emotion, relations, semantic roles, using natural language understanding.
 
+* [Node-RED](https://console.bluemix.net/catalog/starters/node-red-starter): Node-RED is a programming tool for wiring together APIs and online services.
+
+* [OrientDB](http://orientdb.com/orientdb/): A Multi-Model Open Source NoSQL DBMS.
+
+* [Kubernetes Clusters](https://console.bluemix.net/containers-kubernetes/launch): an open-source system for automating deployment, scaling, and management of containerized applications.
+
 ## Featured technologies
 
-* [Jupyter Notebooks](http://jupyter.org/): An open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
+* [Data Science](https://medium.com/ibm-data-science-experience/): Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
 
+* [Graph Database](https://en.wikipedia.org/wiki/Graph_database): A graph database is a database that uses graph structures for semantic queries with nodes, edges and properties to represent and store data. A key concept of the system is the graph (or edge or relationship), which directly relates data items in the store. The relationships allow data in the store to be linked together directly, and in many cases retrieved with one operation.
 
 # Watch the Video
-
+TODO
 [![](http://img.youtube.com/vi/vDCaBPhAr64/0.jpg)](https://youtu.be/vDCaBPhAr64)
 
 # Steps
@@ -54,11 +61,11 @@ Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By sig
 
 ## 2. Create Bluemix services
 
-Create the following Bluemix service and name it wdc-NLU-service:
+Create the Bluemix services required for the individual code patterns:
 
-  * [**Watson Natural Language Understanding**](https://console.bluemix.net/catalog/services/natural-language-understanding)
+  * [**Extend Watson text classification**](https://github.com/IBM/watson-document-classifier/#2-create-bluemix-services)
+  * [**Orchestrate data science workflows using Node-RED**](https://github.com/IBM/node-red-dsx-workflow#2-create-bluemix-services)
   
-  ![](doc/source/images/bluemix_service_nlu.png)
 
 ## 3. Create the notebook
 
