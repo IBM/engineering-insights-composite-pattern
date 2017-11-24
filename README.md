@@ -49,11 +49,12 @@ described in detail below.
 
 1. [Sign up for the Data Science Experience](#1-sign-up-for-the-data-science-experience)
 1. [Create Bluemix services](#2-create-bluemix-services)
-1. [Create the notebook](#3-create-the-notebook)
-1. [Add the data and configuraton file](#4-add-the-data-and-configuration-file)
-1. [Update the notebook with service credentials](#5-update-the-notebook-with-service-credentials)
-1. [Run the notebook](#6-run-the-notebook)
-1. [Analyze the results](#7-analyze-the-results)
+1. [Deploy OrientDB on Kubernetes Cluster](#3-deploy-orientdb-on-kubernetes-cluster)
+1. [Create the notebook](#4-create-the-notebook)
+1. [Add the data and configuraton file](#5-add-the-data-and-configuration-file)
+1. [Update the notebook with service credentials](#6-update-the-notebook-with-service-credentials)
+1. [Run the notebook](#7-run-the-notebook)
+1. [Analyze the results](#8-analyze-the-results)
 
 ## 1. Sign up for the Data Science Experience
 
@@ -66,8 +67,10 @@ Create the Bluemix services required for the individual code patterns:
   * [**Extend Watson text classification**](https://github.com/IBM/watson-document-classifier/#2-create-bluemix-services)
   * [**Orchestrate data science workflows using Node-RED**](https://github.com/IBM/node-red-dsx-workflow#2-create-bluemix-services)
   
+## 3. Deploy OrientDB on Kubernetes Cluster
+Deploy OrientDB on Kubernetes cluster using [Deploy OrientDB on Kubernetes](https://github.com/IBM/deploy-graph-db-container). It will expose the ports on IBM Bluemix through which OrientDB can be accessed from the Jupyter notebook on IBM DSX. Use the `ip-address of your cluster` and node port `port 2424` on which the OrientDB console is mapped, to access that OrientDB through Jupyter notebook. 
 
-## 3. Create the notebook
+## 4. Create the notebook
 
 In [Data Science Experience](http://datascience.ibm.com/):
 
@@ -77,25 +80,24 @@ Click on `Add notebooks` (upper right) to create a notebook.
 * Select the `From URL` tab.
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
-* Enter this Notebook URL: https://github.com/IBM/watson-document-co-relation/blob/master/notebooks/watson_correlate_documents.ipynb
+* Enter this Notebook URL: https://github.com/IBM/engineering-insights-composite-pattern/blob/master/notebooks/watson_engineering_insights.ipynb
 * Click the `Create Notebook` button.
 
 ![](doc/source/images/create_notebook_from_url.png)
 
-## 4. Add the data and configuration file
+## 5. Add the data and configuration file
 
 #### Add the data and configuration to the notebook
 
 * From the `My Projects > Default` page, Use `Find and Add Data` (look for the `10/01` icon)
 and its `Files` tab. 
-* Click `browse` and navigate to this repo `watson-document-classifier/data/sample_text_1.txt`
-* Click `browse` and navigate to this repo `watson-document-classifier/data/sample_text_2.txt`
-* Click `browse` and navigate to this repo `watson-document-classifier/configuration/sample_config.txt`
+* Click `browse` and navigate to this repo `engineering-insights-composite-pattern/data/engineering_insights_data.xlsx`
+* Click `browse` and navigate to this repo `engineering-insights-composite-pattern/configuration/config.txt`
 
 ![](doc/source/images/add_file.png)
 
 > Note:  It is possible to use your own data and configuration files.
-If you use a configuration file from your computer, make sure to conform to the JSON structure given in `configuration/sample_config.txt`.
+If you use a configuration file from your computer, make sure to conform to the JSON structure given in `configuration/config.txt`.
 
 #### Fix-up file names for your own data and configuration files
 
@@ -103,11 +105,16 @@ If you use your own data and configuration files, you will need to update the va
 
 In the notebook, update the global variables in the cell following `2.3 Global Variables` section.
 
-Replace the `sampleTextFileName1`,`sampleTextFileName2` with the name of your data file and `sampleConfigFileName` with your configuration file name.
+Replace the values for `dataFileName` variable with the name of your data file and `configFileName` with your configuration file name.
 
 ![](doc/source/images/update_variables.png)
 
-## 5. Update the notebook with service credentials
+#### Fix-up sheet names in the excel data file
+
+The data for the different artifacts are on different sheets of the excel file. If you use your own naming convention for the excel sheet names, update the global variables in the cell following `2.3 Global Variables` section in the notebook.
+Replace the values for `requirements_sheet_name`,`defects_sheet_name` and `testcases_sheet_name` with the corresponding sheet names in the data excel file.
+
+## 6. Update the notebook with service credentials
 
 #### Add the Watson Natural Language Understanding credentials to the notebook
 Select the cell below `2.1 Add your service credentials from Bluemix for the Watson services` section in the notebook to update the credentials for Watson Natural Langauage Understanding. 
@@ -137,7 +144,7 @@ Update the `username` and `password` key values in the cell below `2.1 Add your 
 
 ![](doc/source/images/objectstorage_credentials.png)
 
-## 6. Run the notebook
+## 7. Run the notebook
 
 When a notebook is executed, what is actually happening is that each code cell in
 the notebook is executed, in order, from top to bottom.
@@ -166,7 +173,7 @@ There are several ways to execute the code cells in your notebook:
     panel. Here you can schedule your notebook to be executed once at some future
     time, or repeatedly at your specified interval.
 
-## 7. Analyze the results
+## 8. Analyze the results
 
 After running each cell of the notebook under Correlate text, the results will display. 
 
