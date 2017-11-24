@@ -1,17 +1,20 @@
-# Correlation of text content across documents using Watson Natural Language Understanding, Python NLTK and IBM Data Science experience
+# Engineering Insights - A composite pattern
 
-In this developer journey we will use Jupyter notebooks in IBM Data Science experience(DSX) to correlate text content across documents with Python NLTK toolkit and IBM Watson Natural Language Understanding. The correlation algorithm is driven by an input configuration json that contains the rules and grammar for building the relations. The configuration json document can be modified to obtain better correlation results between text content across documents.
+The problem that we address in this pattern is in the domain of software development lifecycle. In the software development lifecycle, there are many artifacts that are generated - requirments, testcases, defects etc. In long running software projects with minimal tool support and a churn of team members, the new team members face many questions: 
+- What requirement does this defect correlate to?
+- What are the testcases that I need to execute after a defect is fixed?
+and so on.
+
+The composite pattern demonstrates a solution to this problem using a combination of other individual code patterns.  
 
 When the reader has completed this journey, they will understand how to:
+- Classify the unstructured text content in the document artifacts
+- Correlate the text content to find the best matching artifacts
+- Store the artifact data and correlations in a graph database
+- Query the graph database for insights
+- Submit the request and visualize the results on a Web UI
 
-* Create and run a Jupyter notebook in DSX.
-* Use DSX Object Storage to access data and configuration files.
-* Use IBM Watson Natural Language Understanding API to extract metadata from documents in Jupyter notebooks.
-* Extract and format unstructured data using simplified Python functions.
-* Use a configuration file to specify the co-reference and relations grammar.
-* Store the processed output JSON in DSX Object Storage.
-
-The intended audience for this journey is developers who want to learn a method for correlation of text content across documents. The distinguishing factor of this journey is that it allows a configurable mechanism of text correlation. 
+The intended audience for this journey is developers who want to learn a method for building a solution with queryable insights on text content across documents. The distinguishing factor of this journey is that it allows a configurable mechanism to achieve the insights. 
 
 ![](doc/source/images/architecture.png)
 
