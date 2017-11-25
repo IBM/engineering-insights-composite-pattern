@@ -1,4 +1,4 @@
-# Engineering Insights - A composite pattern
+# Engineering Insights - A composite pattern. (WORK IN PROGRESS)
 
 The problem that we address in this pattern is in the domain of software development lifecycle. In the software development lifecycle, there are many artifacts that are generated - requirments, testcases, defects etc. In long running software projects with minimal tool support and a churn of team members, the new team members face many questions: 
 - What requirement does this defect correlate to?
