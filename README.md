@@ -54,12 +54,15 @@ described in detail below.
 
 1. [Sign up for the Data Science Experience](#1-sign-up-for-the-data-science-experience)
 1. [Create IBM Cloud services](#2-create-ibm-cloud-services)
-1. [Deploy OrientDB on Kubernetes Cluster](#3-deploy-orientdb-on-kubernetes-cluster)
-1. [Create the notebook](#4-create-the-notebook)
-1. [Add the data and configuraton file](#5-add-the-data-and-configuration-file)
-1. [Update the notebook with service credentials](#6-update-the-notebook-with-service-credentials)
-1. [Run the notebook](#7-run-the-notebook)
-1. [Analyze the results](#8-analyze-the-results)
+1. [Import the Node-RED flow](#3-import-the-node-red-flow)
+1. [Note the websocket URL](#4-note-the-websocket-url)
+1. [Update the websocket URL](#5-update-the-websocket-url)
+1. [Deploy OrientDB on Kubernetes Cluster](#6-deploy-orientdb-on-kubernetes-cluster)
+1. [Create the notebook](#7-create-the-notebook)
+1. [Add the data and configuraton file](#8-add-the-data-and-configuration-file)
+1. [Update the notebook with service credentials](#9-update-the-notebook-with-service-credentials)
+1. [Run the notebook](#10-run-the-notebook)
+1. [Analyze the results](#11-analyze-the-results)
 
 ## 1. Sign up for the Data Science Experience
 
@@ -71,11 +74,48 @@ Create the IBM Cloud services required for the individual code patterns:
 
   * [Extend Watson text classification](https://github.com/IBM/watson-document-classifier/#2-create-bluemix-services)
   * [Orchestrate data science workflows using Node-RED](https://github.com/IBM/node-red-dsx-workflow#2-create-bluemix-services)
-  
-## 3. Deploy OrientDB on Kubernetes Cluster
+
+## 3. Import the Node-RED flow
+* [Clone this repo](https://github.com/IBM/engineering-insights-composite-pattern).
+* Navigate to the [orchestrate_dsx_workflow.json](https://github.com/IBM/engineering-insights-composite-pattern/blob/master/node-red-flow/orchestrate_dsx_workflow.json).
+* Open the file with a text editor and copy the contents to Clipboard.
+* On the Node-RED flow editor, click the Menu and select `Import -> Clipboard` and paste the contents.
+
+ ![](doc/source/images/import_nodered_flow.png)
+ <br/>
+ <br/>
+ 
+ #### Deploy the Node-RED flow by clicking on the `Deploy` button
+
+![](doc/source/images/deploy_nodered_flow.png)
+
+## 4. Note the websocket URL
+
+![](doc/source/images/note_websocket_url.png)
+
+The websocket URL is ws://`<NODERED_BASE_URL>`/ws/orchestrate  where the `NODERED_BASE_URL` is the marked portion of the URL in the above image.
+### Note:
+An example websocket URL for a Node-RED app with name `myApp` is `ws://myApp.mybluemix.net/ws/orchestrate`, where `myApp.mybluemix.net` is the NODERED_BASE_URL. 
+
+The NODERED_BASE_URL may have additional region information i.e. `eu-gb` for the UK region. In this case NODERED_BASE_URL would be: `myApp.eu-gb.mybluemix.net`. 
+
+## 5. Update the websocket URL in HTML code
+Click on the node named `HTML`.
+![](doc/source/images/html_node.png)
+
+Click on the HTML area and search for `ws:` to locate the line where the websocket URL is specified. 
+Update the websocket URL with the base URL that was noted in the [Section 4](#4-note-the-websocket-url): 	
+
+	var websocketURL = "ws://NODERED_BASE_URL/ws/orchestrate";
+	
+![](doc/source/images/update_html_websocket_url.png)
+
+Click on `Done` and re-deploy the flow.
+
+## 6. Deploy OrientDB on Kubernetes Cluster
 Deploy OrientDB on Kubernetes cluster using [Deploy OrientDB on Kubernetes](https://github.com/IBM/deploy-graph-db-container). It will expose the ports on IBM Cloud through which OrientDB can be accessed from the Jupyter notebook on IBM DSX. Use the `ip-address of your cluster` and node port `port 2424` on which the OrientDB console is mapped, to access that OrientDB through Jupyter notebook. 
 
-## 4. Create the notebook
+## 7. Create the notebook
 
 In [Data Science Experience](http://datascience.ibm.com/):
 
@@ -90,7 +130,7 @@ Click on `Add notebooks` (upper right) to create a notebook.
 
 ![](doc/source/images/create_notebook_from_url.png)
 
-## 5. Add the data and configuration file
+## 8. Add the data and configuration file
 
 #### Add the data and configuration to the notebook
 
@@ -119,7 +159,7 @@ Replace the values for `dataFileName` variable with the name of your data file a
 The data for the different artifacts are on different sheets of the excel file. If you use your own naming convention for the excel sheet names, update the global variables in the cell following `6.1 Global Variables` section in the notebook.
 Replace the values for `requirements_sheet_name`,`defects_sheet_name` and `testcases_sheet_name` with the corresponding sheet names in the data excel file.
 
-## 6. Update the notebook with service credentials
+## 9. Update the notebook with service credentials
 
 #### Add the Watson Natural Language Understanding credentials to the notebook
 Select the cell below `2.1 Add your service credentials from Bluemix for the Watson services` section in the notebook to update the credentials for Watson Natural Langauage Understanding. 
@@ -149,7 +189,7 @@ Update the `username` and `password` key values in the cell below `2.1 Add your 
 
 ![](doc/source/images/objectstorage_credentials.png)
 
-## 7. Run the notebook
+## 10. Run the notebook
 
 When a notebook is executed, what is actually happening is that each code cell in
 the notebook is executed, in order, from top to bottom.
@@ -178,19 +218,10 @@ There are several ways to execute the code cells in your notebook:
     panel. Here you can schedule your notebook to be executed once at some future
     time, or repeatedly at your specified interval.
 
-## 8. Analyze the results
+## 11. Analyze the results
 
-After running each cell of the notebook under Correlate text, the results will display. 
-
-The configuration json controls the way the text is correlated. The correlation involves two aspects - co-referencing and relation determination. The configuration json contains the rules and grammar for co-referencing  and determining relations. The output from Watson Natural Language Understanding and Python NLTK toolkit is processed based on the rules and grammar specified in the configuration json to come up with the correlation of content across documents. 
-
-![](doc/source/images/correlate_text_config.png)
-
-We can modify the configuration json to add more rules and grammar for co-referencing and determining the relations. The text content correlation results can be enhanced without changes to the code.
-
-We can see from the `6. Visualize correlated text` in the notebook the correlations between the text in the two sample documents that we provided.
-
-![](doc/source/images/network_graph.png)
+The UI can be accessed at the URL: http://`<NODERED_BASE_URL>`/engginsights. 
+The `<NODERED_BASE_URL>` is the base URL noted in section [Note the websocket URL](#4-note-the-websocket-url).
 
 # Troubleshooting
 
