@@ -164,8 +164,7 @@ Replace the values for `requirements_sheet_name`,`defects_sheet_name` and `testc
 #### Add the Watson Natural Language Understanding credentials to the notebook
 Select the cell below `2.1 Add your service credentials from Bluemix for the Watson services` section in the notebook to update the credentials for Watson Natural Langauage Understanding. 
 
-Open the Watson Natural Language Understanding service in your [IBM Cloud Dashboard](https://console.bluemix.net/dashboard/services) and click on your service, which you should have named `wdc-NLU-service`.
-
+Open the Watson Natural Language Understanding service in your [IBM Cloud Dashboard](https://console.bluemix.net/dashboard/services) and click on your service created in section [Create IBM Cloud services](#2-create-ibm-cloud-services).
 Once the service is open click the `Service Credentials` menu on the left.
 
 ![](doc/source/images/service_credentials.png)
@@ -184,7 +183,7 @@ Update the `username` and `password` key values in the cell below `2.1 Add your 
 
 * Use `Find and Add Data` (look for the `10/01` icon) and its `Files` tab. You should see the file names uploaded earlier. Make sure your active cell is the empty one below `2.2 Add...`  
 * Select `Insert to code` (below your sample_text.txt). 
-* Click `Insert Crendentials` from drop down menu.
+* Click `Insert Credentials` from drop down menu.
 * Make sure the credentials are saved as `credentials_1`.
 
 ![](doc/source/images/objectstorage_credentials.png)
@@ -222,6 +221,26 @@ There are several ways to execute the code cells in your notebook:
 
 The UI can be accessed at the URL: http://`<NODERED_BASE_URL>`/engginsights. 
 The `<NODERED_BASE_URL>` is the base URL noted in section [Note the websocket URL](#4-note-the-websocket-url).
+
+On the UI, you can get the list of defects, testcases and requirements. For defects, clicking on a defect shows all the mapped testcases and requirements.
+TODO - Add image
+For testcases, clicking in a testcase shows all the mapped requirements.
+TODO - Add image
+
+We can also get more insights like:
+- Get testcases that have no defects
+- Get all defects of a given severity
+- Get requirements that have no testcases
+- Get defects with no testcases
+and so on.
+
+These insights can help in getting the related testcases and requirements for a defect that can help in testcase execution optimization.
+
+The solution can be enhanced through the following mechanisms.
+* sample-config.txt - The configuration file can be enhanced to classify and tag the text to give better results. We know that authentication, login and password can refer to the same feature. All these words can be tagged to the same class to provide better text correlation.
+* Text similarity - The text similarity code can be enhanced to add lemmatization and spell corrections based on the solution need. `Login` can be misspelt as `Logn`. This text will not be tagged correctly. A spell correction can handle this scenario to provide better results.
+* More insights - More OrientDB queries can be written for more insights.
+
 
 # Troubleshooting
 
