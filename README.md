@@ -56,7 +56,7 @@ described in detail below.
 1. [Create IBM Cloud services](#2-create-ibm-cloud-services)
 1. [Import the Node-RED flow](#3-import-the-node-red-flow)
 1. [Note the websocket URL](#4-note-the-websocket-url)
-1. [Update the websocket URL](#5-update-the-websocket-url)
+1. [Update the websocket URL](#5-update-the-websocket-url-in-html-code)
 1. [Deploy OrientDB on Kubernetes Cluster](#6-deploy-orientdb-on-kubernetes-cluster)
 1. [Create the notebook](#7-create-the-notebook)
 1. [Add the data and configuraton file](#8-add-the-data-and-configuration-file)
