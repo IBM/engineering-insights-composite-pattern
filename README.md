@@ -18,11 +18,11 @@ The intended audience for this journey are developers who want to learn a method
 
 ![](doc/source/images/architecture.png)
 
-1. The unstructured data that need to be analyzed and correlated is extracted from the documents.
+1. The unstructured text data that need to be analyzed and correlated is extracted from the documents using custom python code.
 2. The text is classified and tagged using the code pattern - [Extend Watson text classification](https://github.com/IBM/watson-document-classifier)
 3. The text is correlated with other text using the code pattern - [Correlate documents](https://github.com/IBM/watson-document-co-relation)  
 4. The document data and correlations are stored in the Orient DB database using the code pattern [Store, graph, and derive insights from interconnected data](https://github.com/IBM/graph-db-insights)
-5. The analytics solution on IBM Data Science Experience can be invoked and visualized using the code pattern - [Orchestrate data science workflows using Node-RED](https://github.com/IBM/node-red-dsx-workflow)
+5. The analytics solution on IBM Data Science Experience is invoked and visualized using the code pattern - [Orchestrate data science workflows using Node-RED](https://github.com/IBM/node-red-dsx-workflow)
 
 ## Included components
 
