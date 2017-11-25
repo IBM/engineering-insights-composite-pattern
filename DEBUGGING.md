@@ -11,3 +11,5 @@ Jupyter Notebooks
   these are cleared in later cells. Start over at the top when troubleshooting.
 * Many of the cells rely on service credentials from Bluemix that are set in
   earlier cells. Make sure to add your service credentials correctly.  
+-----------------
+Please refer to the troubleshooting sections of the individual code patterns as well.
