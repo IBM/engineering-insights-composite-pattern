@@ -237,9 +237,9 @@ and so on.
 These insights can help in getting the related testcases and requirements for a defect that can help in testcase execution optimization.
 
 The solution can be enhanced through the following mechanisms.
-* sample-config.txt - The configuration file can be enhanced to classify and tag the text to give better results. We know that authentication, login and password can refer to the same feature. All these words can be tagged to the same class to provide better text correlation.
-* Text similarity - The text similarity code can be enhanced to add lemmatization and spell corrections based on the solution need. `Login` can be misspelt as `Logn`. This text will not be tagged correctly. A spell correction can handle this scenario to provide better results.
-* More insights - More OrientDB queries can be written for more insights.
+* Enhance sample-config.txt - The configuration file can be enhanced to classify and tag the text to give better results. We know that authentication, login and password can refer to the same feature. All these words can be tagged to the same class to provide better text correlation.
+* Enhance text similarity - The text similarity code can be enhanced to add lemmatization and spell corrections based on the solution need. `Login` can be misspelt as `Logn`. This text will not be tagged correctly. A spell correction can handle this scenario to provide better results.
+* Add more insights - More OrientDB queries can be written for more insights.
 
 
 # Troubleshooting
