@@ -45,8 +45,7 @@ The intended audience for this journey are developers who want to learn a method
 * [Graph Database](https://en.wikipedia.org/wiki/Graph_database): A graph database is a database that uses graph structures for semantic queries with nodes, edges and properties to represent and store data. A key concept of the system is the graph (or edge or relationship), which directly relates data items in the store. The relationships allow data in the store to be linked together directly, and in many cases retrieved with one operation.
 
 # Watch the Video
-TODO
-[![](http://img.youtube.com/vi/vDCaBPhAr64/0.jpg)](https://youtu.be/vDCaBPhAr64)
+TODO [![](http://img.youtube.com/vi/vDCaBPhAr64/0.jpg)](https://youtu.be/vDCaBPhAr64)
 
 # Steps
 
@@ -70,8 +69,8 @@ Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By sig
 
 Create the IBM Cloud services required for the individual code patterns:
 
-  * [**Extend Watson text classification**](https://github.com/IBM/watson-document-classifier/#2-create-bluemix-services)
-  * [**Orchestrate data science workflows using Node-RED**](https://github.com/IBM/node-red-dsx-workflow#2-create-bluemix-services)
+  * [Extend Watson text classification](https://github.com/IBM/watson-document-classifier/#2-create-bluemix-services)
+  * [Orchestrate data science workflows using Node-RED](https://github.com/IBM/node-red-dsx-workflow#2-create-bluemix-services)
   
 ## 3. Deploy OrientDB on Kubernetes Cluster
 Deploy OrientDB on Kubernetes cluster using [Deploy OrientDB on Kubernetes](https://github.com/IBM/deploy-graph-db-container). It will expose the ports on IBM Cloud through which OrientDB can be accessed from the Jupyter notebook on IBM DSX. Use the `ip-address of your cluster` and node port `port 2424` on which the OrientDB console is mapped, to access that OrientDB through Jupyter notebook. 
@@ -97,19 +96,19 @@ Click on `Add notebooks` (upper right) to create a notebook.
 
 * From the `My Projects > Default` page, Use `Find and Add Data` (look for the `10/01` icon)
 and its `Files` tab. 
-* Click `browse` and navigate to this repo `engineering-insights-composite-pattern/data/engineering_insights_data.xlsx`
-* Click `browse` and navigate to this repo `engineering-insights-composite-pattern/configuration/config.txt`
+* Click `browse` and navigate to this repo `engineering-insights-composite-pattern/data/sample_data.xlsx`
+* Click `browse` and navigate to this repo `engineering-insights-composite-pattern/configuration/sample_config.txt`
 
 ![](doc/source/images/add_file.png)
 
 > Note:  It is possible to use your own data and configuration files.
-If you use a configuration file from your computer, make sure to conform to the JSON structure given in `configuration/config.txt`.
+If you use a configuration file from your computer, make sure to conform to the JSON structure given in `configuration/sample_config.txt`.
 
 #### Fix-up file names for your own data and configuration files
 
 If you use your own data and configuration files, you will need to update the variables that refer to the data and configuration files in the Jupyter Notebook.
 
-In the notebook, update the global variables in the cell following `2.3 Global Variables` section.
+In the notebook, update the global variables in the cell following `6.1 Global Variables` section.
 
 Replace the values for `dataFileName` variable with the name of your data file and `configFileName` with your configuration file name.
 
@@ -117,7 +116,7 @@ Replace the values for `dataFileName` variable with the name of your data file a
 
 #### Fix-up sheet names in the excel data file
 
-The data for the different artifacts are on different sheets of the excel file. If you use your own naming convention for the excel sheet names, update the global variables in the cell following `2.3 Global Variables` section in the notebook.
+The data for the different artifacts are on different sheets of the excel file. If you use your own naming convention for the excel sheet names, update the global variables in the cell following `6.1 Global Variables` section in the notebook.
 Replace the values for `requirements_sheet_name`,`defects_sheet_name` and `testcases_sheet_name` with the corresponding sheet names in the data excel file.
 
 ## 6. Update the notebook with service credentials
@@ -125,7 +124,7 @@ Replace the values for `requirements_sheet_name`,`defects_sheet_name` and `testc
 #### Add the Watson Natural Language Understanding credentials to the notebook
 Select the cell below `2.1 Add your service credentials from Bluemix for the Watson services` section in the notebook to update the credentials for Watson Natural Langauage Understanding. 
 
-Open the Watson Natural Language Understanding service in your [Bluemix Dashboard](https://console.bluemix.net/dashboard/services) and click on your service, which you should have named `wdc-NLU-service`.
+Open the Watson Natural Language Understanding service in your [IBM Cloud Dashboard](https://console.bluemix.net/dashboard/services) and click on your service, which you should have named `wdc-NLU-service`.
 
 Once the service is open click the `Service Credentials` menu on the left.
 
@@ -135,7 +134,7 @@ In the `Service Credentials` that opens up in the UI, select whichever `Credenti
 
 ![](doc/source/images/copy_credentials.png)
 
-Update the `username` and `password` key values in the cell below `2.1 Add your service credentials from Bluemix for the Watson services` section.
+Update the `username` and `password` key values in the cell below `2.1 Add your service credentials from IBM Cloud for the Watson services` section.
 
 ![](doc/source/images/watson_nlu_credentials.png)
 
