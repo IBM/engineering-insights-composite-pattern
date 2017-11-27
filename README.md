@@ -222,10 +222,10 @@ There are several ways to execute the code cells in your notebook:
 The UI can be accessed at the URL: http://`<NODERED_BASE_URL>`/engginsights. 
 The `<NODERED_BASE_URL>` is the base URL noted in section [Note the websocket URL](#4-note-the-websocket-url).
 
-On the UI, you can get the list of defects, testcases and requirements. 
+On the UI, you can get the list of defects, testcases or requirements. The below image displays the list of all defects.
 ![](doc/source/images/defects.png)
 
-For defects, clicking on a defect shows all the mapped testcases and requirements.
+Clicking on a defect shows all the mapped testcases and requirements.
 
 ![](doc/source/images/mapping.png)
 
@@ -237,6 +237,8 @@ We can also get more insights like:
 - Get requirements that have no testcases
 - Get defects with no testcases
 and so on.
+
+The below image lists all the test cases that have no associated defects.
 
 ![](doc/source/images/moreinsights.png)
 
