@@ -1,4 +1,4 @@
-# Engineering Insights - A composite pattern. (WORK IN PROGRESS)
+# Engineering Insights - A composite pattern. 
 
 The problem that we address in this pattern is in the domain of software development lifecycle. In the software development lifecycle, there are many artifacts that are generated - requirments, testcases, defects etc. In long running software projects with minimal tool support and a churn of team members, the new team members face many questions: 
 - What requirement does this defect correlate to?
@@ -14,7 +14,7 @@ When the reader has completed this journey, they will understand how to:
 - Query the graph database for insights
 - Submit the request and visualize the results on a Web UI
 
-The intended audience for this journey are developers who want to learn a method for building a solution with queryable insights on unstructured text content across documents. The distinguishing factor of this journey is that it allows a configurable mechanism to achieve the insights. 
+The intended audience for this journey are developers who want to learn a method for building a solution with queryable insights on unstructured text content across documents. The distinguishing factor of this journey is that it allows a configurable mechanism to achieve the insights. The pattern also demonstrates an **interactive interface** which allows an user to drill down to get more insights on the artifacts.
 
 ![](doc/source/images/architecture.png)
 
@@ -106,7 +106,7 @@ Click on the node named `HTML`.
 Click on the HTML area and search for `ws:` to locate the line where the websocket URL is specified. 
 Update the websocket URL with the base URL that was noted in the [Section 4](#4-note-the-websocket-url): 	
 
-	var websocketURL = "ws://NODERED_BASE_URL/ws/orchestrate";
+	var websocketURL = "ws://" + NODERED_BASE_URL + NODERED_websocket_path;
 	
 ![](doc/source/images/update_html_websocket_url.png)
 
@@ -188,6 +188,11 @@ Update the `username` and `password` key values in the cell below `2.1 Add your 
 
 ![](doc/source/images/objectstorage_credentials.png)
 
+#### Update the websocket URL in the notebook
+* In the cell below `6. Expose integration point with a websocket client` , update the websocket url noted in [section 4](#4-note-the-websocket-url) in the `start_websocket_listener` function.
+
+![](doc/source/images/update_websocket_url.png)
+
 ## 10. Run the notebook
 
 When a notebook is executed, what is actually happening is that each code cell in
@@ -222,10 +227,14 @@ There are several ways to execute the code cells in your notebook:
 The UI can be accessed at the URL: http://`<NODERED_BASE_URL>`/engginsights. 
 The `<NODERED_BASE_URL>` is the base URL noted in section [Note the websocket URL](#4-note-the-websocket-url).
 
-On the UI, you can get the list of defects, testcases and requirements. For defects, clicking on a defect shows all the mapped testcases and requirements.
-TODO - Add image
-For testcases, clicking in a testcase shows all the mapped requirements.
-TODO - Add image
+On the UI, you can get the list of defects, testcases or requirements. The below image displays the list of all defects.
+![](doc/source/images/defects.png)
+
+Clicking on a defect shows all the mapped testcases and requirements.
+
+![](doc/source/images/mapping.png)
+
+Similarly, for testcases - clicking on a testcase will display all the mapped requirements.
 
 We can also get more insights like:
 - Get testcases that have no defects
@@ -233,6 +242,10 @@ We can also get more insights like:
 - Get requirements that have no testcases
 - Get defects with no testcases
 and so on.
+
+The below image lists all the test cases that have no associated defects.
+
+![](doc/source/images/moreinsights.png)
 
 These insights can help in getting the related testcases and requirements for a defect that can help in testcase execution optimization.
 
