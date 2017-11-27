@@ -188,6 +188,11 @@ Update the `username` and `password` key values in the cell below `2.1 Add your 
 
 ![](doc/source/images/objectstorage_credentials.png)
 
+#### Update the websocket URL in the notebook
+* In the cell below `6. Expose integration point with a websocket client` , update the websocket url noted in [section 4](#4-note-the-websocket-url) in the `start_websocket_listener` function.
+
+![](doc/source/images/update_websocket_url.png)
+
 ## 10. Run the notebook
 
 When a notebook is executed, what is actually happening is that each code cell in
