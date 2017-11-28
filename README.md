@@ -14,7 +14,9 @@ When the reader has completed this journey, they will understand how to:
 - Query the graph database for insights
 - Submit the request and visualize the results on a Web UI
 
-The intended audience for this journey are developers who want to learn a method for building a solution with queryable insights on unstructured text content across documents. The distinguishing factor of this journey is that it allows a configurable mechanism to achieve the insights. The pattern also demonstrates an **interactive user interface using D3.js** which allows an user to drill down to get more insights on the artifacts. D3.js is a JavaScript library for producing dynamic, interactive data visualizations in web browsers. It makes use of the widely implemented SVG, HTML5, and CSS standards.
+The intended audience for this journey are developers who want to learn a method for building a solution with queryable insights on unstructured text content across documents. The distinguishing factor of this journey is that it allows a configurable mechanism to achieve the insights. 
+
+The pattern also demonstrates an **interactive user interface using D3.js** which allows an user to drill down to get more insights on the artifacts. D3.js is a JavaScript library for producing dynamic, interactive data visualizations in web browsers. It makes use of the widely implemented SVG, HTML5, and CSS standards.
 
 ![](doc/source/images/architecture.png)
 
