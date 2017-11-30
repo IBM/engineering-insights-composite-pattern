@@ -246,11 +246,11 @@ We can also get more insights like:
 
 and so on.
 
+Such insights can help in getting the related testcases and requirements for a defect that can help in testcase execution optimization.
+
 The below image lists all the defects that have no associated testcases. 
 
 ![](doc/source/images/moreinsights.png)
-
-These insights can help in getting the related testcases and requirements for a defect that can help in testcase execution optimization.
 
 The solution can be enhanced through the following mechanisms.
 * Enhance sample-config.txt - The configuration file can be enhanced to classify and tag the text to give better results. We know that authentication, login and password can refer to the same feature. All these words can be tagged to the same class to provide better text correlation.
