@@ -229,7 +229,10 @@ There are several ways to execute the code cells in your notebook:
 The UI can be accessed at the URL: http://`<NODERED_BASE_URL>`/engginsights. 
 The `<NODERED_BASE_URL>` is the base URL noted in section [Note the websocket URL](#4-note-the-websocket-url).
 
-On the UI, you can get the list of defects, testcases or requirements. The below image displays the list of all defects.
+On the UI, you can get the list of defects, testcases or requirements. 
+![](doc/source/images/engg_insights_ui.png)
+
+Selecting defects displays the list of all defects.
 ![](doc/source/images/defects.png)
 
 Clicking on a defect shows all the mapped testcases and requirements.
