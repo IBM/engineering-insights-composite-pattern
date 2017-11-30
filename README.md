@@ -232,7 +232,8 @@ The `<NODERED_BASE_URL>` is the base URL noted in section [Note the websocket UR
 On the UI, you can get the list of defects, testcases or requirements. 
 ![](doc/source/images/engg_insights_ui.png)
 
-Selecting defects displays the list of all defects.
+Selecting `Defects` displays the list of all defects.
+
 ![](doc/source/images/defects.png)
 
 Clicking on a defect shows all the mapped testcases and requirements.
