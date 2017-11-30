@@ -239,13 +239,14 @@ Clicking on a defect shows all the mapped testcases and requirements.
 Similarly, for testcases - clicking on a testcase will display all the mapped requirements.
 
 We can also get more insights like:
+- Get defects with no testcases
 - Get testcases that have no defects
 - Get all defects of a given severity
 - Get requirements that have no testcases
-- Get defects with no testcases
+
 and so on.
 
-The below image lists all the test cases that have no associated defects.
+The below image lists all the defects that have no associated testcases. 
 
 ![](doc/source/images/moreinsights.png)
 
