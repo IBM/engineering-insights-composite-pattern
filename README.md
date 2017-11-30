@@ -192,7 +192,7 @@ Update the `username` and `password` key values in the cell below `2.1 Add your 
 
 
 #### Update the OrientDB credentials in the notebook
-* In the cell below `Connect to OrientDB`, enter the hostname, port, username and password.
+* In the cell below `Connect to OrientDB` under `5.2 OrientDB client - functions to connect, store and retrieve data`, enter the hostname, port, username and password.
 
 ![](doc/source/images/update_orientdb_creds.png)
 
