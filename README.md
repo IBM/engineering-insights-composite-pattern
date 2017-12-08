@@ -233,7 +233,7 @@ There are several ways to execute the code cells in your notebook:
 
 ## 11. Analyze the results
 
-The UI can be accessed at the URL: http://`<NODERED_BASE_URL>`/engginsights. 
+The UI can be accessed at the URL: http://`<NODERED_BASE_URL>`/engg-insights. 
 The `<NODERED_BASE_URL>` is the base URL noted in section [Note the websocket URL](#4-note-the-websocket-url).
 
 On the UI, you can get the list of defects, testcases or requirements. 
