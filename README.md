@@ -1,6 +1,6 @@
 # Engineering Insights - A composite pattern. 
 
-The problem that we address in this pattern is in the domain of software development lifecycle. In the software development lifecycle, there are many artifacts that are generated - requirments, testcases, defects etc. In long running software projects with minimal tool support and a churn of team members, the new team members face many questions: 
+The problem that we address in this pattern is in the domain of software development lifecycle. In the software development lifecycle, there are many artifacts that are generated - requirements, testcases, defects etc. In long running software projects with minimal tool support and a churn of team members, the new team members face many questions: 
 - What requirement does this defect correlate to?
 - What are the testcases that I need to execute after a defect is fixed?
 and so on.
@@ -81,7 +81,7 @@ Create the IBM Cloud services required for the individual code patterns:
 * [Clone this repo](https://github.com/IBM/engineering-insights-composite-pattern).
 * Navigate to the [orchestrate_dsx_workflow.json](https://github.com/IBM/engineering-insights-composite-pattern/blob/master/node-red-flow/orchestrate_dsx_workflow.json).
 * Open the file with a text editor and copy the contents to Clipboard.
-* On the Node-RED flow editor, click the Menu and select `Import -> Clipboard` and paste the contents.
+* On the Node-RED flow editor, click the Menu and select `Import` -> `Clipboard` and paste the contents.
 
  ![](doc/source/images/import_nodered_flow.png)
  <br/>
@@ -97,9 +97,9 @@ Create the IBM Cloud services required for the individual code patterns:
 
 The websocket URL is ws://`<NODERED_BASE_URL>`/ws/orchestrate  where the `NODERED_BASE_URL` is the marked portion of the URL in the above image.
 ### Note:
-An example websocket URL for a Node-RED app with name `myApp` is `ws://myApp.mybluemix.net/ws/orchestrate`, where `myApp.mybluemix.net` is the NODERED_BASE_URL. 
+An example websocket URL for a Node-RED app with name `myApp` is `ws://myApp.mybluemix.net/ws/orchestrate`, where `myApp.mybluemix.net` is the `NODERED_BASE_URL`. 
 
-The NODERED_BASE_URL may have additional region information i.e. `eu-gb` for the UK region. In this case NODERED_BASE_URL would be: `myApp.eu-gb.mybluemix.net`. 
+The NODERED_BASE_URL may have additional region information i.e. `eu-gb` for the UK region. In this case `NODERED_BASE_URL` would be: `myApp.eu-gb.mybluemix.net`. 
 
 ## 5. Update the websocket URL in HTML code
 Click on the node named `HTML`.
@@ -164,10 +164,10 @@ Replace the values for `requirements_sheet_name`,`defects_sheet_name` and `testc
 ## 9. Update the notebook with service credentials
 
 #### Add the Watson Natural Language Understanding credentials to the notebook
-Select the cell below `2.1 Add your service credentials from Bluemix for the Watson services` section in the notebook to update the credentials for Watson Natural Langauage Understanding. 
+Select the cell below `2.1 Add your service credentials from Bluemix for the Watson services` section in the notebook to update the credentials for Watson Natural Language Understanding. 
 
 Open the Watson Natural Language Understanding service in your [IBM Cloud Dashboard](https://console.bluemix.net/dashboard/services) and click on your service created in section [Create IBM Cloud services](#2-create-ibm-cloud-services).
-Once the service is open click the `Service Credentials` menu on the left.
+Once the service is open, click the `Service Credentials` menu on the left.
 
 ![](doc/source/images/service_credentials.png)
 
@@ -184,7 +184,7 @@ Update the `username` and `password` key values in the cell below `2.1 Add your 
 * Delete the contents of the cell
 
 * Use `Find and Add Data` (look for the `10/01` icon) and its `Files` tab. You should see the file names uploaded earlier. Make sure your active cell is the empty one below `2.2 Add...`  
-* Select `Insert to code` (below your sample_text.txt). 
+* Select `Insert to code` (below your `sample_text.txt`). 
 * Click `Insert Credentials` from drop down menu.
 * Make sure the credentials are saved as `credentials_1`.
 
