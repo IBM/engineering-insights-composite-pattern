@@ -30,7 +30,7 @@ The pattern also demonstrates an **interactive user interface using D3.js** whic
 
 * [IBM Data Science Experience](https://www.ibm.com/bs-en/marketplace/data-science-experience): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
 
-* [IBM Cloud Object Storage](https://console.ng.bluemix.net/catalog/services/object-storage/?cm_sp=dw-bluemix-_-code-_-devcenter): An IBM Cloud service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market. This code pattern uses Object Storage (Swift API).
+* [IBM Cloud Object Storage](https://console.bluemix.net/catalog/infrastructure/cloud-object-storage): An IBM Cloud service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market. 
 
 * [Watson Natural Language Understanding](https://console.bluemix.net/catalog/services/natural-language-understanding/?cm_sp=dw-bluemix-_-code-_-devcenter): An IBM Cloud service that can analyze text to extract meta-data from content such as concepts, entities, keywords, categories, sentiment, emotion, relations, semantic roles, using natural language understanding.
 
@@ -68,14 +68,14 @@ described in detail below.
 
 ## 1. Sign up for the Data Science Experience
 
-Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By signing up for the Data Science Experience, two services will be created - Spark and ObjectStore in your Bluemix account. Choose the storage type as Object Storage (Swift API) for this code pattern.
+Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By signing up for the Data Science Experience, two services will be created - Spark and ObjectStore in your Bluemix account. 
 
 ## 2. Create IBM Cloud services
 
 Create the IBM Cloud services required for the individual code patterns:
 
-  * [Extend Watson text classification](https://github.com/IBM/watson-document-classifier/#2-create-bluemix-services)
-  * [Orchestrate data science workflows using Node-RED](https://github.com/IBM/node-red-dsx-workflow#2-create-bluemix-services)
+  * [Extend Watson text classification](https://github.com/IBM/watson-document-classifier/#2-create-ibm-cloud-services)
+  * [Orchestrate data science workflows using Node-RED](https://github.com/IBM/node-red-dsx-workflow#2-create-ibm-cloud-services)
 
 ## 3. Import the Node-RED flow
 * [Clone this repo](https://github.com/IBM/engineering-insights-composite-pattern).
