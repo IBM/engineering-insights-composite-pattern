@@ -68,7 +68,7 @@ described in detail below.
 
 ## 1. Sign up for the Watson Studio
 
-Sign up for IBM's [Watson Studio](http://datascience.ibm.com/). By signing up for the Watson Studio, two services will be created - Spark and ObjectStore in your Bluemix account. 
+Sign up for IBM's [Watson Studio](http://datascience.ibm.com/). By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account
 
 ## 2. Create IBM Cloud services
 
@@ -119,16 +119,14 @@ Deploy OrientDB on Kubernetes cluster using [Deploy OrientDB on Kubernetes](http
 
 ## 7. Create the notebook
 
-In [Watson Studio](http://datascience.ibm.com/):
-
-Use the menu on the top to select `Projects` and then `Default Project`. 
-Click on `Add notebooks` (upper right) to create a notebook.
-
+* Open [IBM Watson Studio](https://dataplatform.ibm.com).
+* Click on `Create notebook` to create a notebook.
 * Select the `From URL` tab.
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
-* Enter this Notebook URL: https://github.com/IBM/engineering-insights-composite-pattern/blob/master/notebooks/watson_engineering_insights.ipynb
-* Click the `Create Notebook` button.
+* Enter this Notebook URL:  https://github.com/IBM/engineering-insights-composite-pattern/blob/master/notebooks/watson_engineering_insights.ipynb
+* Select the free Anaconda runtime.
+* Click the `Create` button.
 
 ![](doc/source/images/create_notebook_from_url.png)
 
