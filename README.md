@@ -28,7 +28,7 @@ The pattern also demonstrates an **interactive user interface using D3.js** whic
 
 ## Included components
 
-* [IBM Watson Studio](https://www.ibm.com/bs-en/marketplace/data-science-experience): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
+* [IBM Watson Studio](https://www.ibm.com/cloud/watson-studio): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
 
 * [IBM Cloud Object Storage](https://console.bluemix.net/catalog/infrastructure/cloud-object-storage): An IBM Cloud service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market. 
 
@@ -54,7 +54,7 @@ The pattern also demonstrates an **interactive user interface using D3.js** whic
 Follow these steps to setup and run this developer journey. The steps are
 described in detail below.
 
-1. [Sign up for the Watson Studio](#1-sign-up-for-the-data-science-experience)
+1. [Sign up for Watson Studio](#1-sign-up-for-watson-studio)
 1. [Create IBM Cloud services](#2-create-ibm-cloud-services)
 1. [Import the Node-RED flow](#3-import-the-node-red-flow)
 1. [Note the websocket URL](#4-note-the-websocket-url)
@@ -66,9 +66,9 @@ described in detail below.
 1. [Run the notebook](#10-run-the-notebook)
 1. [Analyze the results](#11-analyze-the-results)
 
-## 1. Sign up for the Watson Studio
+## 1. Sign up for Watson Studio
 
-Sign up for IBM's [Watson Studio](http://datascience.ibm.com/). By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account
+Sign up for IBM's [Watson Studio](http://dataplatform.ibm.com/). By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account
 
 ## 2. Create IBM Cloud services
 
