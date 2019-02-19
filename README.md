@@ -87,7 +87,7 @@ Create the IBM Cloud services required for the individual code patterns:
  <br/>
  <br/>
  
- #### Deploy the Node-RED flow by clicking on the `Deploy` button
+* Deploy the Node-RED flow by clicking on the `Deploy` button
 
 ![](doc/source/images/deploy_nodered_flow.png)
 
@@ -99,7 +99,7 @@ The websocket URL is ws://`<NODERED_BASE_URL>`/ws/orchestrate  where the `NODERE
 ### Note:
 An example websocket URL for a Node-RED app with name `myApp` is `ws://myApp.mybluemix.net/ws/orchestrate`, where `myApp.mybluemix.net` is the `NODERED_BASE_URL`. 
 
-The NODERED_BASE_URL may have additional region information i.e. `eu-gb` for the UK region. In this case `NODERED_BASE_URL` would be: `myApp.eu-gb.mybluemix.net`. 
+The `NODERED_BASE_URL` may have additional region information i.e. `eu-gb` for the UK region. In this case `NODERED_BASE_URL` would be: `myApp.eu-gb.mybluemix.net`. 
 
 ## 5. Update the websocket URL in HTML code
 Click on the node named `HTML`.
@@ -115,7 +115,7 @@ Update the websocket URL with the base URL that was noted in the [Section 4](#4-
 Click on `Done` and re-deploy the flow.
 
 ## 6. Deploy OrientDB on Kubernetes Cluster
-Deploy OrientDB on Kubernetes cluster using [Deploy OrientDB on Kubernetes](https://github.com/IBM/deploy-graph-db-container). It will expose the ports on IBM Cloud through which OrientDB can be accessed from the Jupyter notebook on IBM Watson Studio. Use the `ip-address of your cluster` and node port `port 2424` on which the OrientDB console is mapped, to access that OrientDB through Jupyter notebook. 
+Deploy OrientDB on Kubernetes cluster using [Deploy OrientDB on Kubernetes](https://github.com/IBM/deploy-graph-db-container). It will expose the ports on IBM Cloud through which OrientDB can be accessed from the Jupyter notebook on IBM Watson Studio. Use the `ip-address of your cluster` and node port `2424` on which the OrientDB console is mapped, to access that OrientDB through Jupyter notebook. 
 
 ## 7. Create the notebook
 
@@ -134,7 +134,7 @@ Deploy OrientDB on Kubernetes cluster using [Deploy OrientDB on Kubernetes](http
 
 #### Add the data and configuration to the notebook
 
-* From the `My Projects > Default` page, Use `Find and Add Data` (look for the `10/01` icon)
+* From the `My Projects` > `Default` page, Use `Find and Add Data` (look for the `10/01` icon)
 and its `Files` tab. 
 * Click `browse` and navigate to this repo `engineering-insights-composite-pattern/data/sample_data.xlsx`
 * Click `browse` and navigate to this repo `engineering-insights-composite-pattern/configuration/sample_config.txt`
