@@ -1,4 +1,6 @@
-# Engineering Insights - A composite pattern. 
+# Mine insights from software development artifacts
+
+### Build a complete analytics solution that generates insights by analyzing unstructured text data for informed decision-making
 
 The problem that we address in this pattern is in the domain of software development lifecycle. In the software development lifecycle, there are many artifacts that are generated - requirements, testcases, defects etc. In long running software projects with minimal tool support and a churn of team members, the new team members face many questions: 
 - What requirement does this defect correlate to?
